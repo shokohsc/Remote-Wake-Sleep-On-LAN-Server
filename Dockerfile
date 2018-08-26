@@ -1,5 +1,7 @@
 FROM kafebob/rpi-php-apache:5.6
 
+RUN apt-get install wakeonlan
+
 COPY ./bootstrap /var/www/html/bootstrap
 COPY ./index.php /var/www/html/index.php
 COPY ./config_sample.php /var/www/html/config.php
